@@ -5,11 +5,11 @@ class SimulatedRFIDReader:
     def __init__(self):
         self.tag_database = {
             # if we wanted to make this more realistic we could have Pomona swipes and 5C swipes
-            "001": {"name": "Mitchell", "flex": 80, "swipes": 10, "campus": "Pomona"},
-            "002": {"name": "Prof Dobbs", "flex": 80, "swipes": 5, "campus": "Harvey Mudd"},
-            "003": {"name": "Cecilia Sagehen", "flex": 80, "swipes": 10, "campus": "Pomona"},
-            "004": {"name": "Yukie Grace Chang", "flex": 200, "swipes": 0, "campus": "Pomona"},
-            "005": {"name": "Mikey Dickerson", "flex": 5, "swipes": 0, "campus": "Pomona"},
+            "001": {"name": "Mitchell", "flex": 80, "swipes": 10, "campus": "Pomona", "green_box": 0},
+            "002": {"name": "Prof Dobbs", "flex": 80, "swipes": 5, "campus": "Harvey Mudd", "green_box": 0},
+            "003": {"name": "Cecilia Sagehen", "flex": 80, "swipes": 10, "campus": "Pomona", "green_box": 0},
+            "004": {"name": "Yukie Grace Chang", "flex": 200, "swipes": 0, "campus": "Pomona", "green_box": 0},
+            "005": {"name": "Mikey Dickerson", "flex": 5, "swipes": 0, "campus": "Pomona", "green_box": 0},
             # Add more tag IDs and text as needed
         }
 
@@ -44,6 +44,13 @@ class SimulatedRFIDReader:
 
     def update_tag(self, tag_id):
         # Update meal swipes and flex for the given tag ID
+        # next we want to create a feature that allows users to check in and out their green box
+        # if a user asks to check in their green box, we will update the tag database to reflect that (green_box = 0)
+        # if a user asks to check out their green box, we will update the tag database to reflect that (green_box = 1)
+        # if a user tries to check out a green box when they already have one checked out, we will tell them they can't 
+        # if a user has more than 2 green boxes checked out, they 
+        # if they want a another green box they will have to pay 5 flex
+
         if tag_id in self.tag_database:
             user = self.tag_database[tag_id]
             if user["swipes"] > 0:
