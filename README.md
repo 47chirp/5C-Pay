@@ -1,8 +1,8 @@
 # 5C-Pay
 
-This project is broken into two seperate components one of which is a very simple simulation of how different readers work for cards. 
+This project is broken into two seperate components one of which is a very simple demonstration of how different readers work for cards. 
 
-The idea is to demonstrate first how RFIC card readers work, with a very simple demonstration using the 5Cs
+The idea is to demonstrate first how RFIC card readers work, with a simple simulation of the the 5Cs system.
 
 The simulation is then broken into sub-parts. We have an option to swipe into a building, in this case if the user
 is a Pomona student they will gain access to a Pomona building. In the case where they are not, we return back a 
