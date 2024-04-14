@@ -1,4 +1,17 @@
+import data.dart;
 void main() {
+  studentDetails = SimulatedRFIDReader().getStudentDetails("001");
+  Column(
+    children: [
+      Text("Tag ID: ${studentDetails[0]}"),
+      Text("Name: ${studentDetails[1]}"),
+      Text("Flex: ${studentDetails[2]}"),
+      Text("Swipes: ${studentDetails[3]}"),
+      Text("Campus: ${studentDetails[4]}"),
+      Text("Green Box Checked Out: ${studentDetails[5]}"),
+    ],
+  );
+
   var reader = SimulatedRFIDReader();
   String tagId = reader.readTagId();  // Getting user input for tag ID
 

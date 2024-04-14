@@ -21,5 +21,13 @@ class SimulatedRFIDReader {
     return ["Unknown tag ID."];  // Returns this list if the tag ID is not found
   }
 
-  getInfoAsArray[]
+  List getInfoAsArray(String tagId) {
+    for tag in tagDatabase.keys {
+      if (tag == tagId) {
+        return [tag] + tagDatabase[tag]!.values.toList();
+      }
+    }
+  }
 }
+
+print(SimulatedRFIDReader().getStudentDetails("001"));
