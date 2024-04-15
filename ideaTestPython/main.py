@@ -6,6 +6,8 @@ class SimulatedRFIDReader:
             "003": {"name": "Cecilia Sagehen", "flex": 80, "swipes": 10, "campus": "Pomona", "green_box": 0},
             "004": {"name": "Yukie Grace Chang", "flex": 200, "swipes": 0, "campus": "Pomona", "green_box": 0},
             "005": {"name": "Mikey Dickerson", "flex": 5, "swipes": 0, "campus": "Pomona", "green_box": 0},
+            "006": {"name": "Rebecca", "flex": 20, "swipes": 2, "campus": "Scripps", "green_box": 0},
+            "007": {"name": "James Bond", "flex": 5, "swipes": 8, "campus": "CMC", "green_box": 0},
         }
 
     def read_tag_id(self):
