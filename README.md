@@ -19,5 +19,7 @@ that allows users to track in real time the criteria mentioned in part one. We f
 
 At this stage (4/14/24) the app is set up with general functionality that we wish to build upon through the implementation of cards that can be added to google wallet and apple pay. This, together with payment splitting are additional features that would greatly help students at the 5Cs.
 
+https://devpost.com/software/5c-pay 
+
 - Helene and Mitchell
 
